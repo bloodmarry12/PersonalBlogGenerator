@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="tjan">
+        <title>Welcome to Tjan's Blog</title>
+        <link type="text/css" rel="stylesheet" href="css/standard.css">
+    </head>
+    <body>
+        <!-- Navigator Bar on top of the screen, fixed -->
+        <div id="navbar">
+            <div id="minilogo"><a class="logobtn" href="Default.html">Tjan's Blog</a></div>
+            <div id="btnlist">
+                <a class="navbtn" href="Default.html">Home</a>
+                <a class="navbtn" href="blogs/Contents.html">Contents</a>
+                <a class="navbtn" href="tests/Contents.html">Tests</a>
+                <a class="navbtn" href="Contact.html">Contact</a>
+            </div>
+        </div>
+        <!-- Header -->
+        <header id="logobar">
+            <img id="logo" src="img/logo.GIF" alt="Logo image" height="100">
+            <img id="brief" src="img/Brief.GIF" alt="Brief introduction" height="100">
+            <hr>
+        </header>
+        <!-- Content -->
+        <div id="content">
+            <section id="main">
+                <p>
+                    Greetings, guys and gals. Welcome again to my blog site, a place to demo all my
+                    ideas on Internet. From certain view, this blog works like a lab or a garage 
+                    to me. I believe that all developers will agree on the necessity of an online 
+                    access to their documents, codes, services and stuff like that. Well, at long 
+                    last, I have my own access now.
+                </p>
+                <h2>Something about me.</h2>
+                <p>
+                    I, myself, am a sort of simple guy. Nothing in my life was so special that need to be 
+                    mentioned about, which actually pains me quite a lot, you know. As a programmer, it 
+                    is a shame that I cannot introduce myself in form like "the author of SOMETHING". 
+                    Of course, I did wrote some pieces during my college time, working days and spare 
+                    time. The only problem is that the author, that is me, is not satisfied with these 
+                    works. This, as part of the reason, leads to this blog -- I believe that it is the 
+                    time to <strong>make a difference</strong>.
+                </p>
+                <p>
+                    As a programmer, I classify myself into so called ployglot type. Like many 
+                    people in China, <a href="http://pascal-central.com/ppl/">Pascal</a> and C 
+                    lead me to the world of programming at my middle school time. 
+                    C++ came naturally to me in my college days. Right on the 2015 New Year 
+                    Day, I quitted my position as a C++ developer in a power grid automation vendor. 
+                    From then on, I started my <a href="http://fsharp.org/">F#</a> days.
+                </p>
+                <p>
+                    Technically speaking, I am still a will-be ployglot. Writing simple codes in 
+                    certain language does not make you a this-language programmer. Otherwise, I 
+                    believe there will be a huge number of HTML programmers, CSS programmers, or 
+                    Javascript programmers. An insight and understanding of the logic using certain 
+                    programming language is the very baseline of mastering a programming language. 
+                    With this standard, I am just a C++/F# bilingual (a poor one maybe).
+                </p>
+                <p>
+                    I am on my way of mastering <a href="http://www.racket-lang.org/">Racket</a>, 
+                    <a href="https://www.haskell.org/">Haskell</a> and <a href="http://www.rust-lang.org/">
+                    Rust</a> languages while diving deeper into C++ and F#. Recently, cloud computing 
+                    and machine learning have come to my view.
+                </p>
+                <h2>What will there be here?</h2>
+                <p>
+                    Mainly blog posts of course. But something I have to say is that as a Chinese
+                    programmer with just common English training in my middle school and university,  
+                    most of my posts will be written in 中文 rather than English. You can
+                    check the contents of my blog posts using the topbar <em>Contents</em> button. 
+                </p>
+                <p>
+                    And I plan to share some spare time project entries in this blog. Besides 
+                    the description blog post, visitors may find the entries by clicking the <em>
+                    Tests</em> button on the topbar of this page.
+                </p>
+                <p>
+                    This site is created with a self-written static site generator. This is an 
+                    exercising F# project from the book <em><a href="http://www.manning.com/petricek2/">
+                    F# Deep Dives</a></em> at first. But it is part of my automatic building and 
+                    deploying system now. Therefore, just like other live projects, you may expect 
+                    more features, different appearance or even new site structure here.
+                </p>
+                <h2>So, you want a talk?</h2>
+                <p>
+                    Oh, if you want to contact with me. You can find my email and Weibo (a popular 
+                    Twitter like tool in China) number in the <em>Contact</em> page. Contact will be
+                    updated in time. I am looking forward to the conversation with you.
+                </p>
+            </section>
+            <aside id="side">
+                <p>
+                    <h3>POSTS</h3>
+                    <ul>
+                        <!--${PostItem}-->
+                        <li><a href="blogs/Contents.html"><strong>>> Archives</strong></a></li>
+                    </ul>
+                </p>
+                <p><br></p>
+                <p>
+                    <h3 class="area">ENTRIES</h3>
+                    <ul>
+                        <!--${EntryItem}-->
+                        <li><a href="tests/Contents.html"><strong>>> Archives</strong></a></li>
+                    </ul>
+                </p>
+                <p><br></p>                
+                <p>
+                    <h3 class="area">MORE</h3>
+                    <ul>
+                        <!--${MoreItem}-->
+                        <li><a href="Contact.html">Talk to me</a></li>
+                    </ul>
+                </p>
+            </aside>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p id="footer">
+                <small>
+                    This blog is created with a static site generator written by Tjan.<br>
+                    You can view the source code on
+                    <a href="https://github.com/WangYuanCI/PersonalBlogGenerator">Github.com</a>. 
+                </small>
+            </p>
+        </footer>
+    </body>
+</html>

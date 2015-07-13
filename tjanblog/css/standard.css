@@ -1,0 +1,134 @@
+body {
+    font-family: Constantia, Georgia, serif, SimSun;
+}
+
+#navbar {
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    min-height: 40px;
+    background-color: #2c2c2c;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.25), inset 0px -1px 0px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+#minilogo {
+    float: left;
+    display: block;
+    padding: 10px 20px 12px;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+    margin-left: 10%;
+}
+
+#btnlist {
+    display: block;
+    line-height: 19px;
+}
+
+a.logobtn {
+    text-decoration: none;
+    color: #999999;
+}
+
+a.navbtn {
+    display: block;
+    float: left;
+    padding: 12px;
+    text-decoration: none;
+    color: #999999;
+}
+
+a.navbtn:hover {
+    background-color: #222222;
+    color: #FFFAFA;
+}
+
+header#logobar {
+    position: relative;
+    top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 120px;
+}
+
+img#logo {
+    margin: 5px 5px 0px 5px;
+    padding: 5px;
+}
+
+img#brief {
+    float: right;
+    margin: 5px 5px 0px 5px;
+    padding: 5px;
+}
+
+p#footer {
+    position: relative;
+    background: #DCDCDC;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div#content {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: table;
+}
+
+section#main {
+    width: 80%;
+    display: table-cell;
+    min-height: 600px;
+    padding: 0px 10px 0px 5px;
+}
+
+/*
+section#main p {
+    text-indent: 24px;
+}
+*/
+
+section#main code {
+    background-color: #E6E6FA;
+}
+
+section#main pre {
+    background-color: #E6E6FA;
+    padding: 10px;
+    margin-left: 5%;
+}
+
+section#main blockquote {
+    background-color: #E0FFFF;
+    padding: 5px;
+    margin-right: 0%;
+    padding-left: 18px;
+}
+
+aside#side {
+    width: 20%;
+    display: table-cell;
+    border: 1px dotted black;
+}
+
+aside#side h3 {
+    padding: 10px;
+    font-family: Georgia, serif, SimSun;
+    font-weight: 700;
+    font-size: medium;
+    color: #696969;
+}
+
+aside#side ul li {
+    list-style-type: none;
+    margin-left: -10px;
+}
+
+aside#side ul li a {
+    text-decoration: none;
+}

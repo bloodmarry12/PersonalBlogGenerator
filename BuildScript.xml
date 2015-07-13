@@ -1,0 +1,57 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+    DefaultTargets="Generate">
+    
+    <!-- Items -->
+    <ItemGroup>
+        <SolutionFile Include="BlogGenerator\BlogGenerator.sln" />
+        <BuildBinPath Include="BlogGenerator\Generator\bin\Debug" />
+        <MoveBinPath Include="bin"/>
+        <BlogSrcPath Include="blogsrc" />
+        <TestSrcPath Include="testsrc" />
+        <BlogPath Include="tjanblog\blogs" />
+        <TestPath Include="tjanblog\tests" />
+        <TemplatePath Include="tjanblog\Template.html" />
+        <Generator Include="bin\Generator.exe" />
+        <BinFiles Include="BlogGenerator\Generator\bin\Debug\*.*" />
+    </ItemGroup>
+    
+    <!-- Properties -->
+    <PropertyGroup>
+        <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    </PropertyGroup>
+    
+    <!-- Targets -->
+    <Target Name="Clean">
+        <RemoveDir Directories="@(BlogPath);@(TestPath)" />
+        <Message Text="CLEAN : Removed target directories(@(BlogPath);@(TestPath))" />
+        <MakeDir Directories="@(BlogPath);@(TestPath)" />
+        <Message Text="CLEAN : Created target directories(@(BlogPath);@(TestPath))" />
+        <MSBuild Projects="@(SolutionFile)" 
+            Targets="Clean" 
+            Properties="Configuration=$(Configuration)" />
+        <Message Text="CLEAN : Cleaned the generator project..." />
+    </Target>
+    
+    <Target Name="Build" DependsOnTargets="Clean">
+        <MSBuild Projects="@(SolutionFile)"
+            Targets="Rebuild"
+            Properties="Configuration=$(Configuration)" />
+        <Message Text="BUILD : Build the generator project..." />
+    </Target>
+    
+    <Target Name="MoveBin" DependsOnTargets="Build">
+        <Copy SourceFiles="@(BinFiles)"
+            DestinationFolder="@(MoveBinPath)" />
+        <Message Text="MOVEBIN : Copy files in @(BuildBinPath) to @(MoveBinPath)" />
+    </Target>
+    
+    <Target Name="Generate" DependsOnTargets="MoveBin">
+        <Exec Command="@(Generator) -t @(TemplatePath) -in @(BlogSrcPath) -out @(BlogPath)" />
+        <Message 
+            Text="GENERATE : Generated blogs with : @(Generator) -t @(TemplatePath) -in @(BlogSrcPath) -out @(BlogPath)" />
+        <Exec Command="@(Generator) -t @(TemplatePath) -in @(TestSrcPath) -out @(TestPath)" />
+        <Message 
+            Text="GENERATE : Generated tests with : @(Generator) -t @(TemplatePath) -in @(TestSrcPath) -out @(TestPath)" />
+    </Target>
+    
+</Project>
